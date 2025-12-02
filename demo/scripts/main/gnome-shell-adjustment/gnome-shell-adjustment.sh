@@ -61,16 +61,16 @@ mod_gnome_shell_config_for_keybind_main () {
 	## ## Application / Launcher
 	##
 
-	gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
+	#gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
 
-	#gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Alt>F1']"
+	gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Alt>F1']"
 
 	gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F2']"
 
 
-	gsettings set org.gnome.shell.extensions.apps-menu apps-menu-toggle-menu "['<Alt>F1']"
+	#gsettings set org.gnome.shell.extensions.apps-menu apps-menu-toggle-menu "['<Alt>F1']"
 
-	gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['<Alt>F1']"
+	#gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['<Alt>F1']"
 
 
 	##
@@ -226,15 +226,15 @@ mod_gnome_shell_config_for_keybind_custom () {
 
 
 	## ### Terminal
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/name "'Terminal'"
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/command "'kgx'"
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/binding "'<Alt>Return'"
+	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/name "'Terminal'"
+	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/command "'kgx'"
+	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/binding "'<Alt>Return'"
 
 
 	## ### Terminal-1
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/name "'Terminal-1'"
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/command "'kgx'"
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/binding "'<Shift><Alt>a'"
+	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/name "'Terminal-1'"
+	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/command "'kgx'"
+	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/binding "'<Shift><Alt>a'"
 
 
 	## ### Terminal
@@ -250,15 +250,15 @@ mod_gnome_shell_config_for_keybind_custom () {
 
 
 	## ### Terminal
-	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/name "'Terminal'"
-	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/command "'ptyxis --new-window'"
-	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/binding "'<Alt>Return'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/name "'Terminal'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/command "'ptyxis --new-window'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/binding "'<Alt>Return'"
 
 
 	## ### Terminal-1
-	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/name "'Terminal-1'"
-	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/command "'ptyxis --new-window'"
-	#dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/binding "'<Shift><Alt>a'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/name "'Terminal-1'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/command "'ptyxis --new-window'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal-1/binding "'<Shift><Alt>a'"
 
 
 	## ### File Manager
@@ -384,7 +384,7 @@ mod_gnome_shell_config_for_system_config_quick () {
 mod_gnome_shell_config_for_favorite_apps () {
 
 
-	gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'firefox.desktop', 'org.gnome.Console.desktop', 'org.gnome.Settings.desktop', 'org.gnome.tweaks.desktop']"
+	gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'firefox.desktop', 'org.gnome.Ptyxis.desktop', 'org.gnome.Settings.desktop', 'org.gnome.tweaks.desktop']"
 
 
 	return 0
@@ -920,7 +920,7 @@ mod_gnome_shell_config () {
 
 
 
-	mod_gnome_shell_extension_config_for_dash_to_dock
+	#mod_gnome_shell_extension_config_for_dash_to_dock
 
 	mod_gnome_shell_config_for_favorite_apps
 
@@ -955,9 +955,9 @@ mod_gnome_shell_config () {
 
 mod_tool_config () {
 
-	mod_tool_gnome_console_config
+	#mod_tool_gnome_console_config
 
-	#mod_tool_ptyxis_config
+	mod_tool_ptyxis_config
 
 	#mod_tool_gnome_terminal_config
 

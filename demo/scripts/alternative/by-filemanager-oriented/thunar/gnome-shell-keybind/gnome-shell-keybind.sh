@@ -61,16 +61,16 @@ mod_gnome_shell_config_for_keybind_main () {
 	## ## Application / Launcher
 	##
 
-	gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
+	#gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
 
-	#gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Alt>F1']"
+	gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Alt>F1']"
 
 	gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F2']"
 
 
-	gsettings set org.gnome.shell.extensions.apps-menu apps-menu-toggle-menu "['<Alt>F1']"
+	#gsettings set org.gnome.shell.extensions.apps-menu apps-menu-toggle-menu "['<Alt>F1']"
 
-	gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['<Alt>F1']"
+	#gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['<Alt>F1']"
 
 
 	##
@@ -469,7 +469,7 @@ mod_gnome_shell_config () {
 
 
 
-	mod_gnome_shell_extension_config_for_dash_to_dock
+	#mod_gnome_shell_extension_config_for_dash_to_dock
 
 	mod_gnome_shell_config_for_favorite_apps
 
